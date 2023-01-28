@@ -1,12 +1,13 @@
 import React from 'react'
 
-export default function ResultColumn() {
+export default function ResultColumn({emoji}) {
   return (
     <div>
       
-        <span>item1</span><br />
-        <span>item2</span><br />
-        <span>item3</span><br />
+      {emoji.map((emoji) => (
+        <span key={emoji.code}>{emoji.code}</span>
+      ))}
+
       
     </div>
   )
